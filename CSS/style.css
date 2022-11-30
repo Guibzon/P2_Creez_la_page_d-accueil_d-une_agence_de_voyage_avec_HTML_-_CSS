@@ -134,7 +134,7 @@ nav li:hover {
     align-items: center;
     padding: 15px;
     margin-left: 50px;
-    border: 3px solid #F2F2F2;
+    border: 3px solid #D9D9D9;
     border-radius: 25px;
 }
 .filtres li:hover {
@@ -149,6 +149,11 @@ nav li:hover {
     color: #0065FC;
     padding: 0 10px;
 }
+
+ul .fa-solid {
+    transform: scale(1.6);
+}
+
 .info .fa-solid {
     border: 2px solid #F2F2F2;
     padding: 6px 10px;
@@ -237,7 +242,7 @@ nav li:hover {
 
 /* -------------------- FIN DE LA SECTION "test cartes" -------------------- */
 /* -------------------- Debut de la section "hebergements_populaires" -------------------- */
-.hebergements_populaires {
+#hebergements_populaires {
     margin: 20px auto 60px;
     display: flex;
     justify-content: space-between;
@@ -286,7 +291,7 @@ nav li:hover {
 /* -------------------- FIN DE LA SECTION "hebergements_populaires" -------------------- */
 /* -------------------- Debut de la section "activités" -------------------- */
 
-.activites {
+#activites {
     height: 500px;
     width: 100%;
     margin-bottom: 80px;
