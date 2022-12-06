@@ -155,7 +155,7 @@ label .fa-solid {
 .filtres li {
     display: flex;
     align-items: center;
-    padding: 15px;
+    padding: 1%;
     border: 3px solid #D9D9D9;
     border-radius: 25px;
 }
@@ -184,7 +184,7 @@ ul .fa-solid {
 }
 
 /* -------------------- FIN DE LA SECTION "filtres" -------------------- */
-/* -------------------- Debut de la section "test cartes" -------------------- */
+/* -------------------- Debut de la section "cartes" -------------------- */
 
 .carte_hebergement {
     display: flex;
@@ -201,7 +201,6 @@ ul .fa-solid {
     width: 100%;
     height: 60%;
     object-fit: cover;
-    object-position: 0px 0px;
     border-radius: 13px 13px 0px 0px;
 }
 
@@ -209,8 +208,8 @@ ul .fa-solid {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 41%;
-    padding: 0px 10px;
+    height: 40%;
+    padding: 0% 5%;
     background-color: white;
     border-radius: 0px 0px 15px 15px;
 }
@@ -244,8 +243,8 @@ ul .fa-solid {
     position: relative;
     flex-direction: column;
     justify-content: space-between;
-    width: 206px;
-    padding: 10px 10px;
+    width: 60%;
+    padding: 5%;
     background-color: white;
     border-radius: 0px 13px 13px 0px;
 }
@@ -253,14 +252,16 @@ ul .fa-solid {
 .carte_populaire img {
     position: relative;
     width: 40%;
-    height: 100%;
     object-fit: cover;
-    object-position: -40px 0px;
+    object-position: 50% 0%;
     border-radius: 13px 0px 0px 13px;
 }
 
-#bleu_blanc {
-    object-position: 0px 0px;
+#img_bleu_blanc {
+    object-position: 0px 20%;
+}
+#img_port {
+    object-position: 0px 60%;
 }
 
 .description_populaire p {
@@ -335,7 +336,6 @@ ul .fa-solid {
     height: 450px;
     margin-top: 20px;
     border-radius: 20px;
-    background-color: blue;
     box-shadow: #D9D9D9 0px 2px 8px 0px;
 }
 
@@ -349,7 +349,8 @@ ul .fa-solid {
 .description_activites {
     display: flex;
     position: relative;
-    bottom: 63px;
+    height: 5%;
+    bottom: 66px;
     padding: 20px 0 20px 20px;
     border-radius: 0px 0px 12px 12px;
     background-color: white;
@@ -389,6 +390,8 @@ footer li {
         margin: 0 auto;
     }
 }
+
+/* --------------------------- BREAKPOINT 992 px --------------------------- */
 
 @media only screen and (max-width: 992px) {
 
@@ -459,6 +462,8 @@ footer li {
     }
 }
 
+/* --------------------------- BREAKPOINT 768 px --------------------------- */
+
 @media only screen and (max-width: 768px) {
     header {
         display: flex;
@@ -528,9 +533,13 @@ footer li {
     }
 
     .filtres_conteneur li {
-        padding: 12px;
+        padding: 3%;
         margin: 4px;
-        width: 40%;
+        width: 38%;
+    }
+
+    .filtres_conteneur h2 {
+        font-size: 11px;
     }
 
     #hebergements_populaires {
@@ -538,7 +547,7 @@ footer li {
     }
 
     .populaires {
-        height: 580px;
+        height: 620px;
         border-radius: 0px;
     }
 
@@ -561,11 +570,11 @@ footer li {
     }
 
     #bleu_blanc {
-        object-position: 0px -40px;
+        object-position: 0px 50%;
     }
 
     .hebergements {
-        height: 1380px;
+        height: 1440px;
         border-radius: 0px;
         background-color: white;
         margin-bottom: 20px;
@@ -582,11 +591,15 @@ footer li {
     }
 
     .carte_hebergement img {
-        object-position: 0px -130px;
+        object-position: 0px 60%;
     }
 
     #activites {
         height: 840px;
+    }
+
+    .description_activites {
+        bottom: 52px;
     }
 
     .cartes_activites_marseille {
