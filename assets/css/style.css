@@ -1,10 +1,11 @@
 html {
-    margin: 0 auto;
+    margin: 0 2%;
     max-width: 1400px;
-    font-family: 'Merriweather', serif;
+    font-family: 'Raleway', serif;
     font-size: 16px;
     /* background-color: rgb(90, 90, 34); POUR LES TESTS CARTES */
 }
+
 
 h1 {
     font-size: 22px;
@@ -58,13 +59,21 @@ nav a {
 
 nav li:hover {
     border-top: 4px solid #0065FC;
-    transform: translate(0px, -4px);
+    transform: translate(0px, 0px);
     color: #0065FC;
     transition: all 0.2s ease-out;
 }
 
 /* -------------------- FIN DE LA PARTIE HEADER + NAV -------------------- */
 /* -------------------- Debut de la section "recherche" -------------------- */
+.recherche {
+    width: 100%;
+}
+
+form {
+    width: 100%;
+}
+
 .recherche h1 {
     margin: 0;
     margin-bottom: 8px;
@@ -78,23 +87,29 @@ nav li:hover {
 
 .fonction_recherche {
     display: flex;
-    width: 420px;
+    width: 35%;
     height: 49px;
     margin-top: 20px;
     margin-bottom: 40px;
 }
-.logo_localisation {
+
+label {
+    width: 60%;
     display: flex;
+}
+
+label .fa-solid {
+    display: flex;
+    width: 45px;
+    height: 100%;
     justify-content: center;
     align-items: center;
-    height: 47px;
-    width: 50px;
     background: #F2F2F2;
-    border: 1px solid #F2F2F2;
     border-radius: 15px 0px 0px 15px;
 }
 .fonction_recherche input {
     height: 45px;
+    width: 100%;
     font-size: 18px;
     border: 1px solid #F2F2F2;
     border-right: none;
@@ -108,14 +123,24 @@ nav li:hover {
     opacity: 1;
   }
 .fonction_recherche button {
-    width: 182px;
+    width: 40%;
     background: #0065FC;
     border: 1px solid #0065FC;
     border-radius: 0px 15px 15px 0px;
     color: #F2F2F2;
     font-size: 18px;
     font-weight: bold;
+    cursor: pointer;
 }
+
+.fonction_recherche button:active {
+    color: black;
+}
+
+.fonction_recherche button .fa-solid {
+    display: none;
+}
+
 
 /* -------------------- FIN DE LA SECTION "recherche" -------------------- */
 /* -------------------- Debut de la section "filtres" -------------------- */
@@ -123,22 +148,29 @@ nav li:hover {
 .filtres_conteneur {
     display: flex;
     align-items: center;
+    width: 100%;
 }
 .filtres ul {
     display: flex;
+    justify-content: space-evenly;
     list-style-type: none;
+    width: 65%;
     padding-left: 0px;
 }
 .filtres li {
     display: flex;
     align-items: center;
-    padding: 15px;
-    margin-left: 50px;
+    padding: 1%;
     border: 3px solid #D9D9D9;
     border-radius: 25px;
 }
 .filtres li:hover {
     background-color: #DEEBFF;
+}
+
+.filtres a {
+    display: contents;
+    color: black;
 }
 
 .info {
@@ -151,7 +183,7 @@ nav li:hover {
 }
 
 ul .fa-solid {
-    transform: scale(1.6);
+    transform: scale(1.4);
 }
 
 .info .fa-solid {
@@ -162,7 +194,7 @@ ul .fa-solid {
 }
 
 /* -------------------- FIN DE LA SECTION "filtres" -------------------- */
-/* -------------------- Debut de la section "test cartes" -------------------- */
+/* -------------------- Debut de la section "cartes" -------------------- */
 
 .carte_hebergement {
     display: flex;
@@ -179,7 +211,6 @@ ul .fa-solid {
     width: 100%;
     height: 60%;
     object-fit: cover;
-    object-position: 0px 0px;
     border-radius: 13px 13px 0px 0px;
 }
 
@@ -187,8 +218,9 @@ ul .fa-solid {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 41%;
-    padding: 0px 10px;
+    height: 42%;
+    width: 91%;
+    padding: 0% 5%;
     background-color: white;
     border-radius: 0px 0px 15px 15px;
 }
@@ -202,7 +234,7 @@ ul .fa-solid {
     color: #0065FC;
 }
 
-#etoile_grise {
+.etoile_grise {
     color: #F2F2F2;
 }
 
@@ -222,8 +254,8 @@ ul .fa-solid {
     position: relative;
     flex-direction: column;
     justify-content: space-between;
-    width: 206px;
-    padding: 10px 10px;
+    width: 60%;
+    padding: 5%;
     background-color: white;
     border-radius: 0px 13px 13px 0px;
 }
@@ -231,20 +263,35 @@ ul .fa-solid {
 .carte_populaire img {
     position: relative;
     width: 40%;
-    height: 100%;
     object-fit: cover;
-    object-position: -40px 0px;
+    object-position: 50% 0%;
     border-radius: 13px 0px 0px 13px;
 }
 
-#bleu_blanc {
-    object-position: 0px 0px;
+#img_bleu_blanc {
+    object-position: 0px 20%;
+}
+#img_port {
+    object-position: 0px 60%;
 }
 
 .description_populaire p {
     font-size: 14px;
     margin: 0px
 }
+
+.carte_hebergement a {
+    display: contents;
+    text-decoration: none;
+    color: black;
+}
+
+.carte_populaire a {
+    display: contents;
+    text-decoration: none;
+    color: black;
+}
+
 
 /* -------------------- FIN DE LA SECTION "test cartes" -------------------- */
 /* -------------------- Debut de la section "hebergements_populaires" -------------------- */
@@ -313,8 +360,13 @@ ul .fa-solid {
     height: 450px;
     margin-top: 20px;
     border-radius: 20px;
-    background-color: blue;
     box-shadow: #D9D9D9 0px 2px 8px 0px;
+}
+
+.carte_activites a {
+    display: contents;
+    text-decoration: none;
+    color: black;
 }
 
 .carte_activites img {
@@ -327,7 +379,8 @@ ul .fa-solid {
 .description_activites {
     display: flex;
     position: relative;
-    bottom: 63px;
+    height: 5%;
+    bottom: 66px;
     padding: 20px 0 20px 20px;
     border-radius: 0px 0px 12px 12px;
     background-color: white;
@@ -356,8 +409,241 @@ footer li {
     padding: 6px;
 }
 
-#categorie {
+.categorie {
     padding-bottom: 20px;
     font-size: 18px;
     font-weight: bold;
+}
+
+@media only screen and (min-width: 1460px) {
+    html {
+        margin: 0 auto;
+    }
+}
+
+/* --------------------------- BREAKPOINT 992 px --------------------------- */
+
+@media only screen and (max-width: 992px) {
+
+    .fonction_recherche {
+        width: 50%;
+    }
+
+    .filtres_conteneur {
+        width: 100%;
+    }
+
+    .filtres ul {
+        width: 95%;
+    }
+
+    .filtres li {
+        padding: 8px;
+    }
+
+    .filtres h2 {
+        font-size: 17px;
+    }
+
+    .filtres .fa-solid {
+        padding: 0 8px;
+    }
+
+    ul .fa-solid {
+        transform: scale(1.4);
+    }
+
+
+    #hebergements_populaires {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hebergements {
+        width: 100%;
+    }
+
+    .populaires {
+        width: 100%;
+        height: 280px;
+        margin-top: 40px;
+    }
+
+    .populaires_cartes {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .carte_populaire {
+        width: 30%;
+    }
+
+    footer ul {
+        padding: 12px 0px 0px 70px;
+    }
+
+    footer li {
+        padding: 5px;
+    }
+
+    #categorie {
+        padding-bottom: 18px;
+    }
+}
+
+/* --------------------------- BREAKPOINT 768 px --------------------------- */
+
+@media only screen and (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 60px;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        justify-content: space-between;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        padding-inline-start: 0;
+    }
+
+    nav a {
+        width: 50%;
+    }
+
+    nav li {
+        width: 100%;
+        border-bottom: 4px solid #b9b9b9;
+        height: 80px;
+    }
+
+    nav li:hover {
+        border-top: none;
+        border-bottom: 4px solid #0065FC;
+        transform: translate(0px, 0px);
+        color: #0065FC;
+        transition: all 0.2s ease-out;
+    }
+
+    .fonction_recherche {
+        width: 100%;
+    }
+
+    .fonction_recherche button {
+        width: 15%;
+    }
+
+    .fonction_recherche button .fa-solid {
+        display: initial;
+    }
+
+    label {
+        width: 85%;
+    }
+
+    #rechercher {
+        display: none;
+    }
+
+    .filtres_conteneur {
+        flex-direction: column;
+    }
+
+    .filtres_conteneur ul {
+        flex-wrap: wrap;
+    }
+
+    .filtres_conteneur li {
+        padding: 3%;
+        margin: 4px;
+        width: 38%;
+    }
+
+    .filtres_conteneur h2 {
+        font-size: 11px;
+    }
+
+    #hebergements_populaires {
+        flex-direction: column-reverse;
+    }
+
+    .populaires {
+        height: 620px;
+        border-radius: 0px;
+    }
+
+    .populaires_cartes {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .carte_populaire {
+        width: 80%;
+    }
+
+    .carte_populaire img {
+        width: 35%;
+    }
+
+    .description_populaire {
+        width: 65%;
+    }
+
+    #bleu_blanc {
+        object-position: 0px 50%;
+    }
+
+    .hebergements {
+        height: 1440px;
+        border-radius: 0px;
+        background-color: white;
+        margin-bottom: 20px;
+    }
+
+    .hebergements_cartes {
+        height: 95%;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    .carte_hebergement {
+        width: 80%;
+    }
+
+    .carte_hebergement img {
+        object-position: 0px 60%;
+    }
+
+    #activites {
+        height: 840px;
+    }
+
+    .description_activites {
+        bottom: 52px;
+    }
+
+    .cartes_activites_marseille {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carte_activites {
+        width: 80%;
+        height: 190px;
+    }
+
+    footer {
+        height: 600px;
+        flex-direction: column
+    }
 }
