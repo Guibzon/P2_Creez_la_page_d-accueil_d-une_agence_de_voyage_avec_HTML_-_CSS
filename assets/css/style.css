@@ -1,5 +1,5 @@
 html {
-    margin: 0 2%;
+    margin: 0 0%;
     max-width: 1400px;
     font-family: 'Raleway', serif;
     font-size: 16px;
@@ -28,6 +28,7 @@ header {
 .logo img {
     height: 19px;
     margin-top: 44px;
+    margin-left: 5px;
 }
 
 nav {
@@ -41,20 +42,22 @@ nav ul {
     height: 126px;
     list-style-type: none;
     margin: 0;
-    margin-right: 10px;
 }
 
 nav li {
     display: flex;
+    border-top: 4px solid transparent;
     align-items: center;
     justify-content: center;
     width: 167px;
-    height: 126px;
 }
 
 nav a {
-    text-decoration: none;
-    color: black;
+    display: block;
+    padding-top: 60px;
+    height: 80%;
+    width: 100%;
+    text-align: center;
 }
 
 nav li:hover {
@@ -68,6 +71,7 @@ nav li:hover {
 /* -------------------- Debut de la section "recherche" -------------------- */
 .recherche {
     width: 100%;
+    margin-left: 5px;
 }
 
 form {
@@ -149,6 +153,7 @@ label .fa-solid {
     display: flex;
     align-items: center;
     width: 100%;
+    margin-left: 10px;
 }
 .filtres ul {
     display: flex;
@@ -176,6 +181,7 @@ label .fa-solid {
 .info {
     display: flex;
     align-items: center;
+    margin-left: 5px;
 }
 .filtres .fa-solid {
     color: #0065FC;
@@ -350,6 +356,10 @@ ul .fa-solid {
     margin-bottom: 80px;
 }
 
+#activites h1 {
+    margin-left: 5px;
+}
+
 .cartes_activites_marseille {
     display: flex;
     justify-content: space-between;
@@ -409,13 +419,17 @@ footer li {
     padding: 6px;
 }
 
+footer a:hover {
+    text-decoration: underline;
+}
+
 .categorie {
     padding-bottom: 20px;
     font-size: 18px;
     font-weight: bold;
 }
 
-@media only screen and (min-width: 1460px) {
+@media only screen and (min-width: 1400px) {
     html {
         margin: 0 auto;
     }
@@ -424,6 +438,18 @@ footer li {
 /* --------------------------- BREAKPOINT 992 px --------------------------- */
 
 @media only screen and (max-width: 992px) {
+
+    header {
+        margin: 0 2%;
+    }
+
+    main {
+        margin: 0 2%;
+    }
+
+    .recherche {
+        margin-left: 10px;
+    }
 
     .fonction_recherche {
         width: 50%;
@@ -495,8 +521,15 @@ footer li {
 /* --------------------------- BREAKPOINT 768 px --------------------------- */
 
 @media only screen and (max-width: 768px) {
+
+
+    main {
+        margin: 0;
+    }
+
     header {
         display: flex;
+        margin: 0;
         flex-direction: column;
         margin-bottom: 60px;
     }
@@ -522,6 +555,7 @@ footer li {
 
     nav li {
         width: 100%;
+        border-top: none;
         border-bottom: 4px solid #b9b9b9;
         height: 80px;
     }
@@ -535,7 +569,7 @@ footer li {
     }
 
     .fonction_recherche {
-        width: 100%;
+        width: 95%;
     }
 
     .fonction_recherche button {
