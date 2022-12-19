@@ -54,8 +54,6 @@ nav li {
 
 nav a {
     display: block;
-    padding-top: 60px;
-    height: 80%;
     width: 100%;
     text-align: center;
 }
